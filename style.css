@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Xanh+Mono:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;
+    color: var(--primary-color);
+}
+
+:root {
+    --background-color-1 : #FFFDFA;
+    --background-color-2 : #EBE0C6;
+    --primary-color: #000814;
+    --hover-color: #dcac3c;
+}
+
+main {
+    background-image: linear-gradient(to bottom right, var(--background-color-2), var(--background-color-1));
+}
+
+@media (max-width: 425px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+        height: fit-content;
+    }
+    
+    .banner {
+        box-sizing: border-box;
+        display: flex;
+        width: 90%;
+        height: fit-content;
+        align-self: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 0rem solid var(--hover-color);
+    }
+    
+    h1 {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        letter-spacing: -.1rem;
+    }
+    
+    form {
+        margin-top: 3rem;
+        width: 100%;
+    }
+    
+    form input {
+        margin: .1rem 0;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0;
+        font-size: .5rem;
+    }
+    
+    form input[type="text"] {
+        text-align: center;
+    }
+    
+    form input[type=submit] {
+        font-weight: bolder;
+        letter-spacing: rem;
+    }
+    
+    form input[type=submit]:hover {
+        background-color: var(--hover-color);
+        transition: .1s;
+        cursor: pointer;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .tasks {
+        box-sizing: border-box;
+        padding: 5rem 2rem;
+        width: 100%;
+        overflow: auto;
+    }
+    
+    .tasks::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        min-width: 90%;
+        border-bottom: .2rem solid var(--primary-color);
+    }
+    
+    .action {
+        padding: .3rem;
+        background-color: transparent;
+    }
+    
+    .done-task {
+        opacity: .4;
+        text-decoration: line-through;
+    }
+    
+    .action:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+@media (max-width: 768px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+        height: fit-content;
+    }
+    
+    .banner {
+        box-sizing: border-box;
+        display: flex;
+        padding: 2rem 0;
+        width: 90%;
+        height: fit-content;
+        align-self: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 0rem solid var(--hover-color);
+    }
+    
+    h1 {
+        font-weight: 700;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0rem;
+    }
+    
+    form {
+        margin-top: 3rem;
+        width: 80%;
+    }
+    
+    form input {
+        margin: .1rem 0;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0;
+        font-size: 1rem;
+    }
+    
+    form input[type="text"] {
+        text-align: center;
+    }
+    
+    form input[type=submit] {
+        font-weight: bolder;
+        letter-spacing: .2rem;
+    }
+    
+    form input[type=submit]:hover {
+        background-color: var(--hover-color);
+        transition: .1s;
+        cursor: pointer;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tasks {
+        box-sizing: border-box;
+        padding: 0rem 2rem;
+        width: 100%;
+        overflow: auto;
+    }
+    
+    .tasks::-webkit-scrollbar {
+        width: 0;
+    }
+    
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        min-width: 90%;
+        border-bottom: .2rem solid var(--primary-color);
+    }
+    
+    .action {
+        padding: .3rem;
+        background-color: transparent;
+    }
+    
+    .done-task {
+        opacity: .4;
+        text-decoration: line-through;
+    }
+    
+    .action:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1439px){
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 90%;
+        height: 100vh;
+    }
+    
+    .banner {
+        box-sizing: border-box;
+        display: flex;
+        height: 80%;
+        width: 50%;
+        align-self: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: .6rem solid var(--hover-color);
+    }
+    
+    h1 {
+        font-weight: 700;
+        font-size: 5rem;
+        margin-bottom: 2rem;
+        letter-spacing: -.4rem;
+    }
+    
+    form {
+        margin-top: 3rem;
+        width: 80%;
+    }
+    
+    form input {
+        margin: .1rem 0;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0;
+        font-size: .7rem;
+    }
+    
+    form input[type="text"] {
+        text-align: center;
+    }
+    
+    form input[type=submit] {
+        font-weight: bolder;
+        letter-spacing: .2rem;
+    }
+    
+    form input[type=submit]:hover {
+        background-color: var(--hover-color);
+        transition: .1s;
+        cursor: pointer;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tasks {
+        box-sizing: border-box;
+        padding: 5rem 2rem;
+        width: 50%;
+        overflow: auto;
+    }
+    
+    .tasks::-webkit-scrollbar {
+        width: 0%;
+    }
+    
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        min-width: 90%;
+        border-bottom: .2rem solid var(--primary-color);
+    }
+    
+    .action {
+        padding: .3rem;
+        background-color: transparent;
+    }
+    
+    .done-task {
+        opacity: .4;
+        text-decoration: line-through;
+    }
+    
+    .action:hover {
+        background-color: var(--hover-color);
+    }
+}
+
+
+@media (min-width: 1440px){
+    .container {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        width: 90%;
+        height: 100vh;
+    }
+    
+    .banner {
+        box-sizing: border-box;
+        display: flex;
+        height: 80%;
+        width: 50%;
+        align-self: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: .6rem solid var(--hover-color);
+    }
+    
+    h1 {
+        font-weight: 700;
+        font-size: 10rem;
+        margin-bottom: 2rem;
+        letter-spacing: -.7rem;
+    }
+    
+    form {
+        margin-top: 3rem;
+        width: 80%;
+    }
+    
+    form input {
+        margin: .1rem 0;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 0;
+        font-size: 1rem;
+    }
+    
+    form input[type="text"] {
+        text-align: center;
+    }
+    
+    form input[type=submit] {
+        font-weight: bolder;
+        letter-spacing: .2rem;
+    }
+    
+    form input[type=submit]:hover {
+        background-color: var(--hover-color);
+        transition: .1s;
+        cursor: pointer;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .tasks {
+        box-sizing: border-box;
+        padding: 5rem 2rem;
+        width: 50%;
+        overflow: auto;
+    }
+    
+    .tasks::-webkit-scrollbar {
+        width: 0%;
+    }
+    
+    .task-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem 0;
+        min-width: 90%;
+        border-bottom: .2rem solid var(--primary-color);
+    }
+    
+    .action {
+        padding: .3rem;
+        background-color: transparent;
+    }
+    
+    .done-task {
+        opacity: .4;
+        text-decoration: line-through;
+    }
+    
+    .action:hover {
+        background-color: var(--hover-color);
+    }
+}
